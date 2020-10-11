@@ -1,1 +1,1 @@
-console.log(13)
+import './preloader';

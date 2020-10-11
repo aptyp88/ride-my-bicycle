@@ -86,14 +86,26 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/js/preloader.js":
+/*!*****************************!*\
+  !*** ./src/js/preloader.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("(function( $ ){\r\n    $(window).on('load', () => {\r\n        $(\"#loader-wrapper\").fadeOut('slow');\r\n    });\r\n})(jQuery);\n\n//# sourceURL=webpack:///./src/js/preloader.js?");
+
+/***/ }),
+
 /***/ "./src/js/script.js":
 /*!**************************!*\
   !*** ./src/js/script.js ***!
   \**************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("console.log(13)\n\n//# sourceURL=webpack:///./src/js/script.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _preloader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./preloader */ \"./src/js/preloader.js\");\n/* harmony import */ var _preloader__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_preloader__WEBPACK_IMPORTED_MODULE_0__);\n\n\n//# sourceURL=webpack:///./src/js/script.js?");
 
 /***/ }),
 
