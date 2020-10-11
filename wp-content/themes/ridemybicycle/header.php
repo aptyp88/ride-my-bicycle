@@ -26,35 +26,35 @@ https://developer.wordpress.org/themes/basics/template-files/#template-partials
 		<div class="wrap">
 			<header class="header">
 				<div class="container">
-					<div class="row py-4">
-						<div class="col-6">
-							<div class="header__logo header-logo">
+					<div class="row py-4 d-flex align-items-center">
+						<div class="col-12 col-md-6">
+							<div class="header__logo header-logo text-center text-md-left">
 								<?php
 									$custom_logo_id = get_theme_mod( 'custom_logo' );
 									$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 									if ( has_custom_logo() ) : ?>
 										<a href="<?= get_home_url(); ?>">
 											<img class="header-logo__image" src="<?= esc_url( $logo[0] ); ?>" alt="<?= get_bloginfo( 'name' ); ?>">
-											<div class="header-logo__name">
+											<span class="header-logo__name ml-2">
 												<?= get_bloginfo( 'name' ); ?>
-											</div>
+											</span>
 											<!-- /.logo__name -->
 										</a>
 									<?php else : ?>
 										<a href="<?= get_home_url(); ?>">
-											<img class="header-logo__image" src="<?= get_stylesheet_directory_uri(); ?>/images/logo.png" alt="<?= get_bloginfo( 'name' ); ?>">
-											<div class="logo__name">
+											<img class="header-logo__image mb-2" src="<?= get_stylesheet_directory_uri(); ?>/images/logo.png" alt="<?= get_bloginfo( 'name' ); ?>">
+											<span class="header-logo__name ml-2">
 												<?= get_bloginfo( 'name' ); ?>
-											</div>
+											</span>
 											<!-- /.logo__name -->
 										</a>
 									<?php endif; ?>
 							</div>
-							<!-- /.logo -->
+							<!-- /.header__logo -->
 						</div>
 						<!-- /.col-6 -->
-						<div class="col-6">
-							<div class="header__search">
+						<div class="col-12 col-md-6">
+							<div class="header__search text-center text-md-right">
 									<?= get_search_form(); ?>
 							</div>
 							<!-- /.search -->
