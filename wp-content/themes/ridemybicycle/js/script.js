@@ -97,25 +97,25 @@ eval("console.log(13)\n\n//# sourceURL=webpack:///./src/js/script.js?");
 
 /***/ }),
 
-/***/ "./src/scss/global.scss":
-/*!******************************!*\
-  !*** ./src/scss/global.scss ***!
-  \******************************/
+/***/ "./src/scss/main.scss":
+/*!****************************!*\
+  !*** ./src/scss/main.scss ***!
+  \****************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/scss/global.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/scss/main.scss?");
 
 /***/ }),
 
 /***/ 0:
-/*!*******************************************************!*\
-  !*** multi ./src/js/script.js ./src/scss/global.scss ***!
-  \*******************************************************/
+/*!*****************************************************!*\
+  !*** multi ./src/js/script.js ./src/scss/main.scss ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./src/js/script.js */\"./src/js/script.js\");\nmodule.exports = __webpack_require__(/*! ./src/scss/global.scss */\"./src/scss/global.scss\");\n\n\n//# sourceURL=webpack:///multi_./src/js/script.js_./src/scss/global.scss?");
+eval("__webpack_require__(/*! ./src/js/script.js */\"./src/js/script.js\");\nmodule.exports = __webpack_require__(/*! ./src/scss/main.scss */\"./src/scss/main.scss\");\n\n\n//# sourceURL=webpack:///multi_./src/js/script.js_./src/scss/main.scss?");
 
 /***/ })
 

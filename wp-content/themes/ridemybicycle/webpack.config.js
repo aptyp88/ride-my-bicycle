@@ -6,7 +6,7 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 module.exports = {
 	entry: [
         './src/js/script.js',
-        './src/scss/global.scss'
+        './src/scss/main.scss'
     ], 
 	output: {
 		path: path.resolve(__dirname, 'js'),

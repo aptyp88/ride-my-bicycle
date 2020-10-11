@@ -77,7 +77,7 @@ if ( ! function_exists( 'ridemybicycle_setup' ) ) :
 			apply_filters(
 				'ridemybicycle_custom_background_args',
 				array(
-					'default-color' => 'ffffff',
+					'default-color' => '74d416',
 					'default-image' => '',
 				)
 			)
@@ -94,10 +94,10 @@ if ( ! function_exists( 'ridemybicycle_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 250,
-				'width'       => 250,
-				'flex-width'  => true,
-				'flex-height' => true,
+				'height'      	=> 250,
+				'width'       	=> 250,
+				'flex-width'  	=> true,
+				'flex-height' 	=> true,
 			)
 		);
 	}
@@ -178,15 +178,16 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Connecting jQuery, bootstrap, google fonts 
+*/
 add_action( 'wp_enqueue_scripts', 'maxin_scripts' );
-
 function maxin_scripts() {
-    wp_enqueue_script('jquery-cdn', '//code.jquery.com/jquery-3.4.1.min.js', array(), '1.9.1', false);
-    wp_enqueue_style('bootstrap-cdn', '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', array());
+    wp_enqueue_script('jquery-cdn', '//code.jquery.com/jquery-3.5.1.min.js', array(), '1.9.1', false);
+    wp_enqueue_style('bootstrap-cdn', '//stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css', array());
     wp_enqueue_style( 'style', get_template_directory_uri() . '/styles/main.css', array('bootstrap-cdn'));
-    wp_enqueue_style('google-fonts', '//fonts.googleapis.com/css?family=Playfair+Display|Roboto+Condensed&display=swap', array('bootstrap-cdn'));
+    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Maven+Pro:wght@500&display=swap', array('bootstrap-cdn'));
     wp_enqueue_style('fontawesome', '//use.fontawesome.com/releases/v5.8.2/css/all.css', array('bootstrap-cdn'));
-    wp_enqueue_style('slick-slider-css', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array('fontawesome'));
+    // wp_enqueue_style('slick-slider-css', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array('fontawesome'));
     wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array('jquery-cdn'), '1.0.0', true );
-    wp_enqueue_script('bootstrap-js', '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array('jquery-cdn'), '', true);
 }
