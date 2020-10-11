@@ -179,6 +179,17 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 /**
+ * Register menus
+ */
+
+function register_menus(){
+	add_theme_support( 'menus' );
+
+	register_nav_menus('primary', 'Primary Header Navigation');
+	register_nav_menus('secondary', 'Footer navigation');
+}
+
+/**
  * Connecting jQuery, bootstrap, google fonts 
 */
 add_action( 'wp_enqueue_scripts', 'maxin_scripts' );

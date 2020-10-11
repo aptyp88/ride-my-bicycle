@@ -24,11 +24,7 @@ https://developer.wordpress.org/themes/basics/template-files/#template-partials
 	<body <?php body_class(); ?>>
 		<?php wp_body_open(); ?>
 		<div class="wrap">
-			<div id="loader-wrapper">
-				<div id="loader"></div>
-				<!-- /#loader -->
-			</div>
-			<!-- /#loader-wrapper -->
+			<?php require_once(get_template_directory() . '/template-parts/preloader.php') ?>
 			<header class="header">
 				<div class="container">
 					<div class="row py-4 d-flex align-items-center">
@@ -59,7 +55,7 @@ https://developer.wordpress.org/themes/basics/template-files/#template-partials
 						</div>
 						<!-- /.col-6 -->
 						<div class="col-12 col-md-6">
-							<div class="header__search text-center text-md-right">
+							<div class="header__search header-search text-center text-md-right">
 									<?= get_search_form(); ?>
 							</div>
 							<!-- /.search -->
@@ -69,6 +65,9 @@ https://developer.wordpress.org/themes/basics/template-files/#template-partials
 					<!-- /.row -->
 				</div>
 				<!-- /.container -->
+				<nav>
+
+				</nav>
 			</header>
 			<!-- /.header -->
 		
