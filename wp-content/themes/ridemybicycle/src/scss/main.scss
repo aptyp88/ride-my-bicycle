@@ -1,1 +1,18 @@
 @import "./colors";
+@import "./header/header.scss";
+@import "./footer/footer.scss";
+
+.wrap{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main{
+    flex: 1 0 auto;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
