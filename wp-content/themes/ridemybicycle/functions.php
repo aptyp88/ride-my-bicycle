@@ -199,26 +199,3 @@ function maxin_scripts() {
 	wp_enqueue_script('bootstrap-js', '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array('jquery-cdn'), '', true);
     wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array('jquery-cdn'), '1.0.0', true );
 }
-
-
-
-
-add_filter( 'wp_nav_menu_objects', 'add_menu_parent_class' );
-function add_menu_parent_class( $items ) {
-    $parents = array();
-    foreach ( $items as $item ) {
-        //Check if the item is a parent item
-        if ( $item->menu_item_parent && $item->menu_item_parent > 0 ) {
-            $parents[] = $item->menu_item_parent;
-        }
-    }
-
-    foreach ( $items as $item ) {
-        if ( in_array( $item->ID, $parents ) ) {
-            //Add "menu-parent-item" class to parents
-            $item->classes[] = 'menu-parent-item'; 
-        }
-    }
-
-    return $items;    
-}

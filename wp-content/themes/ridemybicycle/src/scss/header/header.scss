@@ -60,7 +60,9 @@
       .menu-item {
         a {
           &::after {
-            display: none !important;
+            // display: none !important;
+            // content: '';
+            border: none;
           }
         }
         padding: 10px 0;
@@ -75,6 +77,27 @@
           left: -1px;
           border-radius: 0px 0px 7px 7px;
           margin: 0px;
+          .menu-item-has-children {
+            a.dropdown-toggle {
+              position: relative;
+              &::after {
+                // position: absolute;
+                // right: 0;
+                // color: red;
+                // content: "\f105";
+                // font-family: "Font Awesome 5 Free";
+                display: inline-block;
+                position: absolute;
+                content: "";
+                border: solid $white;
+                border-width: 3px 3px 0 0;
+                padding: 3px;
+                top: 50%;
+                right: 10px;
+                transform: translate(0, -50%) rotate(45deg);
+              }
+            }
+          }
           .menu-item {
             .dropdown-menu {
               left: 100%;
