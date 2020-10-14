@@ -50,7 +50,8 @@ if ( ! function_exists( 'ridemybicycle_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'ridemybicycle' ),
+				'top-menu'    => esc_html__( 'Top menu', 'ridemybicycle' ),
+				'footer-menu' => esc_html__( 'Footer menu', 'ridemybicycle' )
 			)
 		);
 
@@ -177,17 +178,13 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
 /**
- * Register menus
+ * Register bootstrap nav walker
  */
-
-function register_menus(){
-	add_theme_support( 'menus' );
-
-	register_nav_menus('primary', 'Primary Header Navigation');
-	register_nav_menus('secondary', 'Footer navigation');
+function register_navwalker(){
+	require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
 }
+add_action( 'after_setup_theme', 'register_navwalker' );
 
 /**
  * Connecting jQuery, bootstrap, google fonts 
@@ -198,7 +195,7 @@ function maxin_scripts() {
     wp_enqueue_style('bootstrap-cdn', '//stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css', array());
     wp_enqueue_style( 'style', get_template_directory_uri() . '/styles/main.css', array('bootstrap-cdn'));
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Maven+Pro:wght@500&display=swap', array('bootstrap-cdn'));
-    wp_enqueue_style('fontawesome', '//use.fontawesome.com/releases/v5.9.0/css/all.css', array('bootstrap-cdn'));
-    // wp_enqueue_style('slick-slider-css', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array('fontawesome'));
+	wp_enqueue_style('fontawesome', '//use.fontawesome.com/releases/v5.9.0/css/all.css', array('bootstrap-cdn'));
+	wp_enqueue_script('bootstrap-js', '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array('jquery-cdn'), '', true);
     wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array('jquery-cdn'), '1.0.0', true );
 }

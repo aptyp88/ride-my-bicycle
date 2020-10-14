@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/js/bootstrap-menu-hover.js":
+/*!****************************************!*\
+  !*** ./src/js/bootstrap-menu-hover.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("(function( $ ){\r\n    $(\".btn-group, .dropdown\").hover(\r\n        function () {\r\n            $('>.dropdown-menu', this).stop(true, true).fadeIn(\"fast\");\r\n            $(this).addClass('open');\r\n        },\r\n        function () {\r\n            $('>.dropdown-menu', this).stop(true, true).fadeOut(\"fast\");\r\n            $(this).removeClass('open');\r\n        }\r\n    );\r\n})(jQuery);\n\n//# sourceURL=webpack:///./src/js/bootstrap-menu-hover.js?");
+
+/***/ }),
+
 /***/ "./src/js/preloader.js":
 /*!*****************************!*\
   !*** ./src/js/preloader.js ***!
@@ -105,7 +116,7 @@ eval("(function( $ ){\r\n    $(window).on('load', () => {\r\n        $(\"#loader
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _preloader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./preloader */ \"./src/js/preloader.js\");\n/* harmony import */ var _preloader__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_preloader__WEBPACK_IMPORTED_MODULE_0__);\n\n\n//# sourceURL=webpack:///./src/js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _preloader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./preloader */ \"./src/js/preloader.js\");\n/* harmony import */ var _preloader__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_preloader__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _bootstrap_menu_hover__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bootstrap-menu-hover */ \"./src/js/bootstrap-menu-hover.js\");\n/* harmony import */ var _bootstrap_menu_hover__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_bootstrap_menu_hover__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n(function( $ ){\r\n    \r\n})(jQuery);\r\n// $(\".nav-link.dropdown-toggle\").hover( function () {\r\n//     // Open up the dropdown\r\n//     $(this).removeAttr('data-toggle'); // remove the data-toggle attribute so we can click and follow link\r\n//     $(this).parent().addClass('show'); // add the class show to the li parent\r\n//     $(this).next().addClass('show'); // add the class show to the dropdown div sibling\r\n// }, function () {\r\n//     // on mouseout check to see if hovering over the dropdown or the link still\r\n//     var isDropdownHovered = $(this).next().filter(\":hover\").length; // check the dropdown for hover - returns true of false\r\n//     var isThisHovered = $(this).filter(\":hover\").length;  // check the top level item for hover\r\n//     if(isDropdownHovered || isThisHovered) {\r\n//         // still hovering over the link or the dropdown\r\n//     } else {\r\n//         // no longer hovering over either - lets remove the 'show' classes\r\n//         $(this).attr('data-toggle', 'dropdown'); // put back the data-toggle attr\r\n//         $(this).parent().removeClass('show');\r\n//         $(this).next().removeClass('show');\r\n//     }\r\n// });\r\n// // Check the dropdown on hover\r\n// $(\".dropdown-menu\").hover( function () {\r\n// }, function() {\r\n//     var isDropdownHovered = $(this).prev().filter(\":hover\").length; // check the dropdown for hover - returns true of false\r\n//     var isThisHovered= $(this).filter(\":hover\").length;  // check the top level item for hover\r\n//     if(isDropdownHovered || isThisHovered) {\r\n//         // do nothing - hovering over the dropdown of the top level link\r\n//     } else {\r\n//         // get rid of the classes showing it\r\n//         $(this).parent().removeClass('show');\r\n//         $(this).removeClass('show');\r\n//     }\r\n// });\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./src/js/script.js?");
 
 /***/ }),
 

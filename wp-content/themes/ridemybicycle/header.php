@@ -65,11 +65,27 @@ https://developer.wordpress.org/themes/basics/template-files/#template-partials
 					<!-- /.row -->
 				</div>
 				<!-- /.container -->
-				<nav>
-
+				<nav class="navbar navbar-expand-md navbar-light header__menu py-0" role="navigation">
+					<div class="container py-0 pl-0">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+							<?php
+							wp_nav_menu( array(
+								'theme_location'    => 'top-menu',
+		
+								'container'         => 'div',
+								'container_class'   => 'collapse navbar-collapse',
+								'container_id'      => 'bs-example-navbar-collapse-1',
+								'menu_class'        => 'nav navbar-nav',
+								'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+								'walker'            => new WP_Bootstrap_Navwalker(),
+							) );
+							?>
+					</div>
+					<!-- /.container -->
 				</nav>
+				<!-- /.navbar -->
 			</header>
 			<!-- /.header -->
-		
-	</body>
-</html>
