@@ -54,6 +54,9 @@
       span {
         color: $white;
       }
+      .active {
+        background-color: $green;
+      }
       .menu-item {
         a {
           &::after {
@@ -72,95 +75,28 @@
           left: -1px;
           border-radius: 0px 0px 7px 7px;
           margin: 0px;
-          .menu-item{
-              .dropdown-menu{
-                  left: 100%;
-                  top: 0;
-                  border-radius: 0;
-                  span{
-                      text-transform: uppercase;
-                      font-weight: bold;
-                  }
-                  .menu-item{
-                      top: -1px;
-                  }
+          .menu-item {
+            .dropdown-menu {
+              left: 100%;
+              top: 0;
+              border-radius: 0;
+              top: -1px;
+              span {
+                text-transform: uppercase;
+                font-weight: bold;
               }
-              .dropdown-item{
-                  padding: 8px .5rem;
-                  &:hover{
-                    background-color: $green;
-                  }
+              .menu-item {
               }
+            }
+            .dropdown-item {
+              padding: 8px 0.5rem;
+              &:hover {
+                background-color: $green;
+              }
+            }
           }
         }
       }
     }
-    // .dropdown {
-    //   &:hover {
-    //     .dropdown-menu {
-    //       display: block;
-    //     }
-    //   }
-    // }
-
-    //     .dropdown-toggle {
-    //       &::after {
-    //         display: none;
-    //       }
-    //     }
-    //     li {
-    //       &.dropdown {
-    //         &:hover > ul.dropdown-menu {
-    //           display: block;
-    //         }
-    //       }
-    //     }
-    //     ul {
-    //       &.dropdown-menu li {
-    //         &:hover > ul.dropdown-menu,
-    //         &:focus > ul.dropdown-menu {
-    //           display: block;
-    //         }
-    //       }
-
-    //       &.menu-top li::first-child:focus > a.dropdown-toggle {
-    //         display: block;
-    //       }
-    //     }
-    //     ul.dropdown-menu li > ul.dropdown-menu {
-    //       left: 100%;
-    //       top: -11px;
-    //     }
-    //     #menu-top {
-    //       margin-left: 0;
-    //       font-weight: bold;
-    //       text-transform: uppercase;
-    //       color: $white;
-    //       span {
-    //         color: $white;
-    //       }
-    //       .menu-item {
-    //         padding: 10px 0;
-    //         &:hover {
-    //           background: $green;
-    //         }
-    //         .dropdow-menu {
-    //           margin-top: 0;
-    //           padding: 0;
-    //           background: green;
-    //           border: 0;
-    //           top: 96%;
-    //           border-radius: 0;
-    //           li {
-    //             left: 100%;
-    //             top: 0;
-    //             background: $hover-green;
-    //           }
-    //           &:hover {
-    //             display: block;
-    //           }
-    //         }
-    //       }
-    //     }
   }
 }

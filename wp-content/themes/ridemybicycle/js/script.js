@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("(function( $ ){\r\n    $(\".btn-group, .dropdown\").hover(\r\n        function () {\r\n            $('>.dropdown-menu', this).stop(true, true).fadeIn(\"fast\");\r\n            $(this).addClass('open');\r\n        },\r\n        function () {\r\n            $('>.dropdown-menu', this).stop(true, true).fadeOut(\"fast\");\r\n            $(this).removeClass('open');\r\n        }\r\n    );\r\n})(jQuery);\n\n//# sourceURL=webpack:///./src/js/bootstrap-menu-hover.js?");
+eval("/**\r\n * \r\n */\r\n\r\n(function( $ ){\r\n    /**\r\n     * Makes an element dropdown on hover\r\n     */\r\n    $(\".btn-group, .dropdown\").hover(\r\n        function () {\r\n            $('>.dropdown-menu', this).stop(true, true).fadeIn(\"fast\");\r\n            $(this).addClass('open');\r\n        },\r\n        function () {\r\n            $('>.dropdown-menu', this).stop(true, true).fadeOut(\"fast\");\r\n            $(this).removeClass('open');\r\n        }\r\n    );\r\n    \r\n\r\n    /**\r\n     * Makes the dropdown clickable\r\n     */\r\n    $('.navbar .dropdown > a').click(function(){\r\n        location.href = this.href;\r\n    });\r\n})(jQuery);\n\n//# sourceURL=webpack:///./src/js/bootstrap-menu-hover.js?");
 
 /***/ }),
 

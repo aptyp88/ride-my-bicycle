@@ -31,8 +31,8 @@ https://developer.wordpress.org/themes/basics/template-files/#template-partials
 						<div class="col-12 col-md-6">
 							<div class="header__logo header-logo text-center text-md-left">
 								<?php
-									$custom_logo_id = get_theme_mod( 'custom_logo' );
-									$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+									// $custom_logo_id = get_theme_mod( 'custom_logo' );
+									// $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 									if ( has_custom_logo() ) : ?>
 										<a href="<?= get_home_url(); ?>">
 											<img class="header-logo__image" src="<?= esc_url( $logo[0] ); ?>" alt="<?= get_bloginfo( 'name' ); ?>">
@@ -65,7 +65,8 @@ https://developer.wordpress.org/themes/basics/template-files/#template-partials
 					<!-- /.row -->
 				</div>
 				<!-- /.container -->
-				<nav class="navbar navbar-expand-md navbar-light header__menu py-0" role="navigation">
+				<?php  if( get_nav_menu_locations()) : ?>
+				<nav class="navbar navbar-expand-md navbar-dark header__menu py-0" role="navigation">
 					<div class="container py-0 pl-0">
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
@@ -87,5 +88,6 @@ https://developer.wordpress.org/themes/basics/template-files/#template-partials
 					<!-- /.container -->
 				</nav>
 				<!-- /.navbar -->
+				<?php endif; ?>
 			</header>
 			<!-- /.header -->

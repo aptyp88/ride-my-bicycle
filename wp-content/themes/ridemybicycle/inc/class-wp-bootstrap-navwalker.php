@@ -212,7 +212,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
 
 			// If the item has_children add atts to <a>.
 			if ( $this->has_children ) {
-				$atts['href']          = '#';
+				$atts['href']          = $item->url; // add url in dropdown el
 				$atts['data-toggle']   = 'dropdown';
 				$atts['aria-haspopup'] = 'true';
 				$atts['aria-expanded'] = 'false';
@@ -429,7 +429,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) :
 					// Test for .disabled or .sr-only classes.
 					$linkmod_classes[] = $class;
 					unset( $classes[ $key ] );
-				} elseif ( preg_match( '/^dropdown-header|^dropdown-divider|^dropdown-item-text/i', $class )  ) {
+				} elseif ( preg_match( '/^dropdown-header|^dropdown-divider|^dropdown-item-text/i', $class )  ) {  //delete "&& $depth > 0" for multiline dropdown
 					/*
 					 * Test for .dropdown-header or .dropdown-divider and a
 					 * depth greater than 0 - IE inside a dropdown.
